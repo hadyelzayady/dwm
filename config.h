@@ -17,6 +17,8 @@ static const char col_black[]       = "#000000";
 static const char col_red[]         = "#ff0000";
 static const char col_yellow[]      = "#ffff00";
 static const char col_white[]       = "#ffffff";
+static const char col_green[]       = "#90ee90";
+static const char col_green_off[]       = "#e3fbe3";
 
 static const char *colors[][3]      = {
 	/*					fg         bg          border   */
@@ -24,6 +26,8 @@ static const char *colors[][3]      = {
 	[SchemeSel]  =	 { col_gray4, col_cyan,   col_cyan },
 	[SchemeWarn] =	 { col_black, col_yellow, col_red },
 	[SchemeUrgent]=	 { col_white, col_red,    col_red },
+	 { col_black, col_green,    col_green },
+	 { col_black, col_green_off,    col_green_off },
 };
 
 /* tagging */
