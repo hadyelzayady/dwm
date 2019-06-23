@@ -1,0 +1,10 @@
+--- dwm.c
++++ dwm.c
+@@ -806,6 +808,7 @@ focus(Client *c)
+ 			selmon = c->mon;
+ 		if (c->isurgent)
+ 			clearurgent(c);
++		XkbLockGroup(dpy, XkbUseCoreKbd, c->kbdgrp);
+ 		detachstack(c);
+ 		attachstack(c);
+ 		grabbuttons(c, 1);
