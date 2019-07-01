@@ -24,6 +24,8 @@ static const char col_white[]       = "#ffffff";
 static const char col_green[]       = "#90ee90";
 static const char col_green_off[]       = "#e3fbe3";
 static const char col_brown[]       = "#883e12";
+static const char col_walnut[]       = "#9f7462";
+
 
 static const char *colors[][3]      = {
 	/*					fg         bg          border   */
@@ -34,6 +36,7 @@ static const char *colors[][3]      = {
 	 { col_black, col_green,    col_green },
 	 { col_black, col_green_off,    col_green_off },
 	 { col_white, col_brown,    col_brown },
+	 {col_white,col_walnut,col_walnut}
 };
 
 /* tagging */
@@ -46,6 +49,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+	{ "copyq",     NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
