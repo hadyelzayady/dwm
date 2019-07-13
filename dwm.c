@@ -869,7 +869,7 @@ drawbar(Monitor *m)
 			if ((unsigned int)*ts > LENGTH(colors)) { ts++; continue ; }
 			ctmp = *ts;
 			*ts = '\0';
-			drw_text(drw, m->ww - sw - stw + tx, 0, sw - tx, bh, lrpad / 2, tp, 0);
+			drw_text(drw, m->ww - sw - stw + tx, 0, sw - tx, bh, 0 , tp, 0);
 			tx += TEXTW(tp) -lrpad;
 			if (ctmp == '\0') { break; }
 			drw_setscheme(drw, scheme[(unsigned int)(ctmp-1)]);
