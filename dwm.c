@@ -870,7 +870,7 @@ drawbar(Monitor *m)
 			ctmp = *ts;
 			*ts = '\0';
 			drw_text(drw, m->ww - sw - stw + tx, 0, sw - tx, bh, 0 , tp, 0);
-			tx += TEXTW(tp) -lrpad;
+			tx += TEXTW(tp) -lrpad/2;
 			if (ctmp == '\0') { break; }
 			drw_setscheme(drw, scheme[(unsigned int)(ctmp-1)]);
 			*ts = ctmp;
