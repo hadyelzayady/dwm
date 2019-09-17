@@ -861,11 +861,11 @@ drawbar(Monitor *m)
     int tx = 0;
     char ctmp;
 	Client *c;
-	
+
 	if(showsystray && m == systraytomon(m))
 		stw = getsystraywidth();
 	/* draw status first so it can be overdrawn by tags later */
-	if (m == selmon) { /* status is only drawn on selected monitor */
+	if (m == selmon || 1) { /* status is only drawn on selected monitor */
 		drw_setscheme(drw, scheme[SchemeNorm]);
 		sw = TEXTW(stext) - lrpad / 2 + 2; /* 2px right padding */
 		while (1) {
@@ -1705,17 +1705,17 @@ setborderpx(const Arg *arg)
 	Client *c;
 
 	if (arg->i == 0)
-		mons->borderpx = borderpx;	
+		mons->borderpx = borderpx;
 	else if (mons->borderpx + arg->i < 0)
-		mons->borderpx = 0;	
+		mons->borderpx = 0;
 	else
-		mons->borderpx += arg->i;	
-	
+		mons->borderpx += arg->i;
+
 	for (c = mons->clients; c; c = c->next)
 		if (c->bw + arg->i < 0)
-			c->bw = mons->borderpx = 0;	
+			c->bw = mons->borderpx = 0;
 		else
-			c->bw = mons->borderpx;	
+			c->bw = mons->borderpx;
 
 	arrange(selmon);
 }
@@ -2387,9 +2387,13 @@ updatesizehints(Client *c)
 void
 updatestatus(void)
 {
+	Monitor* m;
 	if (!gettextprop(root, XA_WM_NAME, stext, sizeof(stext)))
 		strcpy(stext, "dwm-"VERSION);
-	drawbar(selmon);
+
+	for(m = mons; m; m = m -> next)
+		drawbar(m);
+
 	updatesystray();
 }
 
