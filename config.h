@@ -89,9 +89,9 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static char dmenuhist[]="/home/hady/.dmenu_history";
 static const char *dmenucmd[] = { "dmenu_run","-H", dmenuhist, "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "xfce4-terminal", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *scratchpadcmd[] = { "xfce4-terminal", "-T", scratchpadname, "--geometry", "120x34", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
