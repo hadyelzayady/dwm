@@ -2390,7 +2390,7 @@ updatestatus(void)
 {
 	Monitor* m;
 	if (!gettextprop(root, XA_WM_NAME, stext, sizeof(stext)))
-		strcpy(stext, "dwm-"VERSION);
+		strcpy(stext, "Geeker");
 
 	for(m = mons; m; m = m -> next)
 		drawbar(m);
