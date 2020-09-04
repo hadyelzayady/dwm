@@ -56,6 +56,7 @@ static const Rule rules[] = {
 	{ "copyq",     NULL,       NULL,       0,            1,           -1 },
 	//xdownloadmanager floating windows in the browser
 	{ "java-lang-Thread",     "java-lang-Thread",       " ",       0,            1,           -1 },
+	{ "firefox",     "Places",       "Library",       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -91,7 +92,7 @@ static const Layout layouts[] = {
 // static const char *dmenucmd[] = { "dmenu_run","-H", dmenuhist, "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "-d", "120x34", NULL };
+static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "-d", "120","34", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
