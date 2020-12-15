@@ -38,10 +38,12 @@ typedef struct {
 } Sp;
 const char *spcmd1[] = {TERMINAL, "-t", "spterm", "-d", "120","34", NULL };
 const char *spcmd2[] = {TERMINAL, "-t", "spcalc", "-d", "50","20", "-e", "bc", "-lq", NULL };
+const char *spcmd3[] = {TERMINAL, "-t", "spnotes", "-d", "50","20", "-e", "jrnl", "--edit", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
 	{"spcalc",    spcmd2},
+	{"spnotes",    spcmd3},
 };
 
 /* tagging */
@@ -58,6 +60,7 @@ static const Rule rules[] = {
 	{ NULL,       NULL,       "Event Tester",   0,            0,           0,         1,        -1 },
 	{ NULL,      NULL,    "spterm",       	    SPTAG(0),     1,           1,         0,        -1 },
 	{ NULL,      NULL,    "spcalc",       	    SPTAG(1),     1,           1,         0,        -1 },
+	{ NULL,      NULL,    "spnotes",       	    SPTAG(2),     1,           1,         0,        -1 },
 	{ "copyq",     NULL,       NULL,       0,            1,           -1 },
 	//xdownloadmanager floating windows in the browser
 	{ "java-lang-Thread",     "java-lang-Thread",       " ",       0,            1,           -1 },
@@ -180,6 +183,7 @@ static Key keys[] = {
 	// { MODKEY,			XK_semicolon,	shiftview,	{ .i = 1 } },
 	// { MODKEY|ShiftMask,		XK_semicolon,	shifttag,	{ .i = 1 } },
 	{ MODKEY|ShiftMask,			XK_apostrophe,	togglescratch,	{.ui = 1} },
+	{ MODKEY|ShiftMask,			XK_n,	togglescratch,	{.ui = 2} },
 	/* { MODKEY|ShiftMask,		XK_apostrophe,	spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd } },
 	{ MODKEY|ShiftMask,		XK_Return,	togglescratch,	{.ui = 0} },
