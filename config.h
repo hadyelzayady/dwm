@@ -74,6 +74,7 @@ static int nmaster     = 1;    /* number of clients in master area */
 static int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
 #include "vanitygaps.c"
+#include "gaplessgrid.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
  	{ "[]=",	tile },			/* Default: Master on left, slaves on right */
@@ -89,6 +90,7 @@ static const Layout layouts[] = {
 	{ ">M>",	centeredfloatingmaster },	/* Same but master floats */
 
 	{ "><>",	NULL },			/* no layout function means floating behavior */
+	{ "###",	gaplessgrid },			/* grid layout */
 	{ NULL,		NULL },
 };
 
@@ -167,6 +169,7 @@ static Key keys[] = {
 	// { MODKEY,			XK_i,		setlayout,	{.v = &layouts[6]} }, [> centeredmaster <]
 	{ MODKEY|ShiftMask,		XK_i,		setlayout,	{.v = &layouts[7]} }, /* centeredfloatingmaster */
 
+	{ MODKEY,		XK_g,		setlayout,	{.v = &layouts[9]} }, /* centeredfloatingmaster */
 	{ MODKEY,			XK_i,		incnmaster,     {.i = +1 } },
 	{ MODKEY,		XK_d,		incnmaster,     {.i = -1 } },
 	{ MODKEY,			XK_backslash,		view,		{0} },
