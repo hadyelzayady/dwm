@@ -2561,7 +2561,7 @@ void
 updatestatus(void)
 {
 	if (!gettextprop(root, XA_WM_NAME, rawstext, sizeof(rawstext)))
-		strcpy(stext, "dwm-"VERSION);
+		strcpy(stext, "Geeker");
 	else
 		copyvalidchars(stext, rawstext);
 	drawbar(selmon);
