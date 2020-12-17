@@ -37,7 +37,7 @@ typedef struct {
 	const void *cmd;
 } Sp;
 const char *spcmd1[] = {TERMINAL, "-t", "spterm", "-d", "120","34", NULL };
-const char *spcmd2[] = {TERMINAL, "-t", "spcalc", "-d", "50","20", "-e", "bc", "-lq", NULL };
+const char *spcmd2[] = {TERMINAL, "-t", "spcalc", "-d", "50","20", "-e", "wcalc", NULL };
 const char *spcmd3[] = {TERMINAL, "-t", "spnotes", "-d", "50","20", "-e", "jrnl", "--edit", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
