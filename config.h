@@ -66,6 +66,7 @@ static const Rule rules[] = {
 	{ "java-lang-Thread",     "java-lang-Thread",       " ",       0,            1,           -1 },
 	{ "firefox",     "Places",       "Library",       0,            1,           -1 },
 	{ "firefox",     "Toolkit",       "Picture-in-Picture",       0,            1,           -1 },
+	{ "youtube-music-desktop-app",     NULL,  NULL,     1 << 8,            0,           0,		0,		-1 },
 };
 
 /* layout(s) */
