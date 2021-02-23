@@ -1718,6 +1718,7 @@ run(void)
 {
 	XEvent ev;
 	/* main event loop */
+	system("wmname LG3D");
 	XSync(dpy, False);
 	while (running && !XNextEvent(dpy, &ev))
 		if (handler[ev.type])
