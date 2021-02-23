@@ -37,9 +37,9 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {"st", "-T", "spterm", "-g", "120x34", "-e", "tmux","new","-A", "-s", "spterms", NULL };
-const char *spcmd2[] = {"st", "-T", "spcalc", "-g", "50x20", "-e", "wcalc", NULL };
-const char *spcmd3[] = {"st", "-T", "spnotes", "-g", "50x20", "-e", "notetaker", NULL };
+const char *spcmd1[] = {TERMINAL, "-t", "spterm", "-o", "window.columns=120","window.lines=50", "-e", "tmux","new","-A", "-s", "spterms", NULL };
+const char *spcmd2[] = {TERMINAL, "-t", "spcalc", "-o","window.columns=50", "window.lines=20", "-e", "wcalc", NULL };
+const char *spcmd3[] = {TERMINAL, "-t", "spnotes", "-o", "window.columns=50","window.lines=20", "-e", "notetaker", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
@@ -243,7 +243,7 @@ static Button buttons[] = {
 	{ ClkStatusText,        0,              Button5,        sigdwmblocks,   {.i = 5} },
 	{ ClkStatusText,        ShiftMask,      Button1,        sigdwmblocks,   {.i = 6} },
 #endif
-	{ ClkStatusText,        ShiftMask,      Button3,        spawn,          SHCMD(TERMINAL " -e nvim ~/.local/src/dwmblocks/config.h") },
+	{ ClkStatusText,        ShiftMask,      Button3,        spawn,          SHCMD(TERMINAL " -e nvim ~/repos/dwmblocks/config.h") },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        defaultgaps,	{0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
