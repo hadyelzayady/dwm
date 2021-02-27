@@ -2,7 +2,7 @@
 
 /* Constants */
 #define TERMINAL "alacritty"
-#define TERMCLASS "alacritty"
+#define TERMCLASS "Alacritty"
 
 /* appearance */
 static unsigned int borderpx  = 5;        /* border pixel of windows */
@@ -63,11 +63,11 @@ static const Rule rules[] = {
 	{ NULL,      NULL,    "spcalc",       	    SPTAG(1),     1,           1,         0,        -1 },
 	{ NULL,      NULL,    "spnotes",       	    SPTAG(2),     1,           1,         0,        -1 },
 	{ "copyq",     NULL,       NULL,            0,            1,           0,         0,        -1 },
+	{ "firefox", "Places", "Library",           0,            1,           0,         0,        -1 },
+	{ "firefox","Toolkit", "Picture-in-Picture",0,            1,           0,         0,        -1 },
+	{ "youtube-music-desktop-app",NULL,NULL, 1 << 8,          0,           0,		  0,		-1 },
 	//xdownloadmanager floating windows in the browser
-	{ "java-lang-Thread",     "java-lang-Thread",       " ",       0,            1,           -1 },
-	{ "firefox",     "Places",       "Library",       0,            1,           -1 },
-	{ "firefox",     "Toolkit",       "Picture-in-Picture",       0,            1,           -1 },
-	{ "youtube-music-desktop-app",     NULL,  NULL,     1 << 8,            0,           0,		0,		-1 },
+	{ "java-lang-Thread","java-lang-Thread"," ",0,            1,           0,         0,        -1 },
 };
 
 /* layout(s) */
