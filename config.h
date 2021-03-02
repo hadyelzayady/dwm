@@ -62,10 +62,16 @@ static const Rule rules[] = {
 	{ NULL,      NULL,    "spterm",       	    SPTAG(0),     1,           1,         0,        -1 },
 	{ NULL,      NULL,    "spcalc",       	    SPTAG(1),     1,           1,         0,        -1 },
 	{ NULL,      NULL,    "spnotes",       	    SPTAG(2),     1,           1,         0,        -1 },
+
+	{ NULL,      NULL,    "pulsemixer",       	0,            1,           0,         0,        -1 },
+	{ NULL,      NULL,    "nmtui-float",       	0,            1,           0,         0,        -1 },
+	{ NULL,      NULL,    "calcurse-float",       	0,            1,           0,         0,        -1 },
+
+	{ "youtube-music-desktop-app",NULL,NULL, 1 << 8,          0,           0,		  0,		-1 },
 	{ "copyq",     NULL,       NULL,            0,            1,           0,         0,        -1 },
 	{ "firefox", "Places", "Library",           0,            1,           0,         0,        -1 },
 	{ "firefox","Toolkit", "Picture-in-Picture",0,            1,           0,         0,        -1 },
-	{ "youtube-music-desktop-app",NULL,NULL, 1 << 8,          0,           0,		  0,		-1 },
+	{ "firefox","Toolkit", "Picture-in-Picture",0,            1,           0,         0,        -1 },
 	//xdownloadmanager floating windows in the browser
 	{ "java-lang-Thread","java-lang-Thread"," ",0,            1,           0,         0,        -1 },
 };
