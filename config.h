@@ -68,6 +68,7 @@ static const Rule rules[] = {
 	{ NULL,      NULL,    "calcurse-float",       	0,            1,           0,         0,        -1 },
 
 	{ "youtube-music-desktop-app",NULL,NULL, 1 << 8,          0,           0,		  0,		-1 },
+	{ "Notion","notion",NULL, 1 << 7,          0,           0,		  0,		-1 },
 	{ "copyq",     NULL,       NULL,            0,            1,           0,         0,        -1 },
 	{ "firefox", "Places", "Library",           0,            1,           0,         0,        -1 },
 	{ "firefox","Toolkit", "Picture-in-Picture",0,            1,           0,         0,        -1 },
@@ -148,6 +149,7 @@ ResourcePref resources[] = {
 #include <X11/XF86keysym.h>
 #include "shiftview.c"
 
+#include "focusurgent.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	STACKKEYS(MODKEY,                          focus)
@@ -164,6 +166,7 @@ static Key keys[] = {
 	TAGKEYS(			XK_7,		6)
 	TAGKEYS(			XK_8,		7)
 	TAGKEYS(			XK_9,		8)
+	{ MODKEY,           XK_u,      focusurgent,    {0} },
 	{ MODKEY,			XK_0,		view,		{.ui = ~0 } },
 	{ MODKEY|ShiftMask,		XK_0,		tag,		{.ui = ~0 } },
 	{ MODKEY,			XK_Tab,		view,		{0} },
