@@ -247,6 +247,11 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,					XK_k,		moveresize,		{.v = (int []){ 0, -25, 0, 0 }}},
 	{ MODKEY|ControlMask,					XK_l,	moveresize,		{.v = (int []){ 25, 0, 0, 0 }}},
 	{ MODKEY|ControlMask,					XK_h,	moveresize,		{.v = (int []){ -25, 0, 0, 0 }}},
+	//move with arrow keys
+	{ MODKEY|ControlMask,					XK_Down,	moveresize,		{.v = (int []){ 0, 25, 0, 0 }}},
+	{ MODKEY|ControlMask,					XK_Up,		moveresize,		{.v = (int []){ 0, -25, 0, 0 }}},
+	{ MODKEY|ControlMask,					XK_Right,	moveresize,		{.v = (int []){ 25, 0, 0, 0 }}},
+	{ MODKEY|ControlMask,					XK_Left,	moveresize,		{.v = (int []){ -25, 0, 0, 0 }}},
 	//resize
 	{ MODKEY|ControlMask|ShiftMask,			XK_j,	moveresize,		{.v = (int []){ 0, 0, 0, 25 }}},
 	{ MODKEY|ControlMask|ShiftMask,			XK_k,		moveresize,		{.v = (int []){ 0, 0, 0, -25 }}},
