@@ -864,6 +864,8 @@ clientmessage(XEvent *e)
 		for (i = 0; i < LENGTH(tags) && !((1 << i) & c->tags); i++);
 		if (i < LENGTH(tags)) {
 			const Arg a = {.ui = 1 << i};
+			//added by hady to fix auto jump to client in another monitor and the old client still focused
+			unfocus(selmon->sel,0);
 			selmon = c->mon;
 			view(&a);
 			focus(c);
@@ -1163,7 +1165,10 @@ focus(Client *c)
 		if (c->mon != selmon)
 			selmon = c->mon;
 		if (c->isurgent)
-			seturgent(c, 0);
+			{
+
+				seturgent(c, 0);
+			}
 		detachstack(c);
 		attachstack(c);
 		grabbuttons(c, 1);
