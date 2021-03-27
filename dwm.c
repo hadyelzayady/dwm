@@ -1363,8 +1363,20 @@ grabkeys(void)
 void
 incnmaster(const Arg *arg)
 {
-	selmon->nmaster = selmon->pertag->nmasters[selmon->pertag->curtag] = MAX(selmon->nmaster + arg->i, 0);
-	arrange(selmon);
+	/** char command[100]="echo "; */
+	/** char layoutNumberString[2]; */
+	/** sprintf(layoutNumberString,"%d",selmon->sellt); */
+	/** strncat(command,selmon->ltsymbol,16); */
+	/** char rest[]= " >> /tmp/dwm.log"; */
+	/** strncat(command, rest,strlen(rest)); */
+	/** system(command); */
+
+	// only increase master in tile or bstack layouts
+	if(strncmp(selmon->ltsymbol,layouts[0].symbol,5)==0 || strncmp(selmon->ltsymbol,layouts[1].symbol,5)==0)
+	{
+		selmon->nmaster = selmon->pertag->nmasters[selmon->pertag->curtag] = MAX(selmon->nmaster + arg->i, 0);
+		arrange(selmon);
+	}
 }
 
 #ifdef XINERAMA
