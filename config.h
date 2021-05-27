@@ -37,7 +37,7 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {TERMINAL, "-t", "spterm", "-o", "window.columns=120","window.lines=50", "-e", "tmux","new","-A", "-s", "spterms", NULL };
+const char *spcmd1[] = {TERMINAL, "-t", "spterm", "-o", "window.columns=120","window.lines=50", NULL };
 const char *spcmd2[] = {TERMINAL, "-t", "spcalc", "-o","window.columns=50", "window.lines=20", "-e", "wcalc", NULL };
 const char *spcmd3[] = {TERMINAL, "-t", "spnotes", "-o", "window.columns=50","window.lines=20", "-e", "notetaker", NULL };
 static Sp scratchpads[] = {
