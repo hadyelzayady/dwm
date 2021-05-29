@@ -71,6 +71,7 @@ static const Rule rules[] = {
 	{ NULL,      NULL,    "calcurse-float",       	0,            1,           0,         0,        -1 },
 	{ "todoist-nativefier-409272",      "todoist-nativefier-409272", NULL,       	2,            1,           0,         0,        -1 },
 	{ "copyq",     NULL,       NULL,            0,            1,           0,         0,        -1 },
+	{ "scrcpy",     NULL,       NULL,            0,            1,           0,         0,        -1 },
 	{ "firefox", "Places", "Library",           0,            1,           0,         0,        -1 },
 	{ "firefox","Toolkit", "Picture-in-Picture",0,            1,           0,         0,        -1 },
 	{ "firefox","Toolkit", "Picture-in-Picture",0,            1,           0,         0,        -1 },
@@ -172,9 +173,9 @@ static Key keys[] = {
 	TAGKEYS(			XK_9,		8)
 	// { MODKEY,           XK_u,      focusurgent,    {0} },
 	// hide window
-	{ MODKEY,			XK_grave,		tag,            {.ui = 1 << 9}  },
+	{ MODKEY,			XK_grave,		tag,            {.ui = 1 << 11}  },
 	//restore window
-	{ MODKEY|ShiftMask,			XK_grave,		toggleview,            {.ui = 1 << 9}  },
+	{ MODKEY|ShiftMask,			XK_grave,		toggleview,            {.ui = 1 << 11}  },
 
 	{ MODKEY,			XK_0,		view,		{.ui = ~0 } },
 	{ MODKEY|ShiftMask,		XK_0,		tag,		{.ui = ~0 } },
