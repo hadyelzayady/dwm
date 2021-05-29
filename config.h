@@ -171,6 +171,11 @@ static Key keys[] = {
 	TAGKEYS(			XK_8,		7)
 	TAGKEYS(			XK_9,		8)
 	// { MODKEY,           XK_u,      focusurgent,    {0} },
+	// hide window
+	{ MODKEY,			XK_grave,		tag,            {.ui = 1 << 9}  },
+	//restore window
+	{ MODKEY|ShiftMask,			XK_grave,		toggleview,            {.ui = 1 << 9}  },
+
 	{ MODKEY,			XK_0,		view,		{.ui = ~0 } },
 	{ MODKEY|ShiftMask,		XK_0,		tag,		{.ui = ~0 } },
 	{ MODKEY,			XK_Tab,		view,		{0} },
@@ -222,7 +227,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_Left,	focusmon,	{.i = -1 } },
 	{ MODKEY|ShiftMask,		XK_Left,	tagmon,		{.i = -1 } },
 	{ MODKEY,			XK_Right,	focusmon,	{.i = +1 } },
-	{ MODKEY|ShiftMask,		XK_Right,	tagmon,		{.i = +1 } },
+{ MODKEY|ShiftMask,		XK_Right,	tagmon,		{.i = +1 } },
 	//same with down and up arrow to it will be more convenient with multi monitor where both monitors are up and down
 	{ MODKEY,			XK_Up,	focusmon,	{.i = -1 } },
 	{ MODKEY|ShiftMask,		XK_Up,	tagmon,		{.i = -1 } },
