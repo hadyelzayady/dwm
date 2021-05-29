@@ -173,9 +173,9 @@ static Key keys[] = {
 	TAGKEYS(			XK_9,		8)
 	// { MODKEY,           XK_u,      focusurgent,    {0} },
 	// hide window
-	{ MODKEY,			XK_grave,		tag,            {.ui = 1 << 11}  },
+	{ MODKEY,			XK_grave,		tag,            {.ui = 1 << 12}  },
 	//restore window
-	{ MODKEY|ShiftMask,			XK_grave,		toggleview,            {.ui = 1 << 11}  },
+	{ MODKEY|ShiftMask,			XK_grave,		toggleview,            {.ui =  1 << 12}  },
 
 	{ MODKEY,			XK_0,		view,		{.ui = ~0 } },
 	{ MODKEY|ShiftMask,		XK_0,		tag,		{.ui = ~0 } },
