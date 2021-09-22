@@ -74,8 +74,7 @@ static const Rule rules[] = {
 	{ "scrcpy",     NULL,       NULL,            0,            1,           0,         0,        -1 },
 	{ "firefox", "Places", "Library",           0,            1,           0,         0,        -1 },
 	{ "firefox","Toolkit", "Picture-in-Picture",0,            1,           0,         0,        -1 },
-	{ "firefox","Toolkit", "Picture-in-Picture",0,            1,           0,         0,        -1 },
-	{ NULL,       NULL,  "WhatsApp for Linux"  ,0,            1,           0,         0,        -1 },
+	{ NULL,       NULL,  "WhatsApp for Linux"  ,1 << 6,            1,           0,         0,        -1 },
 
 	//xdownloadmanager floating windows in the browser
 	{ "java-lang-Thread","java-lang-Thread"," ",0,            1,           0,         0,        -1 },
@@ -299,12 +298,12 @@ static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 #ifndef __OpenBSD__
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button1,        sigdwmblocks,   {.i = 1} },
-	{ ClkStatusText,        0,              Button2,        sigdwmblocks,   {.i = 2} },
-	{ ClkStatusText,        0,              Button3,        sigdwmblocks,   {.i = 3} },
-	{ ClkStatusText,        0,              Button4,        sigdwmblocks,   {.i = 4} },
-	{ ClkStatusText,        0,              Button5,        sigdwmblocks,   {.i = 5} },
-	{ ClkStatusText,        ShiftMask,      Button1,        sigdwmblocks,   {.i = 6} },
+	// { ClkStatusText,        0,              Button1,        sigdwmblocks,   {.i = 1} },
+	// { ClkStatusText,        0,              Button2,        sigdwmblocks,   {.i = 2} },
+	// { ClkStatusText,        0,              Button3,        sigdwmblocks,   {.i = 3} },
+	// { ClkStatusText,        0,              Button4,        sigdwmblocks,   {.i = 4} },
+	// { ClkStatusText,        0,              Button5,        sigdwmblocks,   {.i = 5} },
+	// { ClkStatusText,        ShiftMask,      Button1,        sigdwmblocks,   {.i = 6} },
 #endif
 	{ ClkStatusText,        ShiftMask,      Button3,        spawn,          SHCMD(TERMINAL " -e nvim ~/repos/dwmblocks/config.h") },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
